@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="/style/style.css">
 </head>
+
 <body class="flex min-h-screen bg-gray-900 text-white">
     <!-- Sidebar -->
     <aside
@@ -76,8 +78,8 @@
             </div>
         </nav>
     </aside>
-        <!-- Main Content -->
-        <main class="flex-1 ml-20 p-8 bg-cover bg-center bg-fixed relative animate-fade-in"
+    <!-- Main Content -->
+    <main class="flex-1 ml-20 p-8 bg-cover bg-center bg-fixed relative animate-fade-in"
         style="background-image: url('/asset/img/hero.jpg');">
         <!-- Overlay -->
         <div class="absolute inset-0 bg-gradient-to-br from-gray-900/80 to-transparent"></div>
@@ -92,10 +94,33 @@
                     Découvrez mes projets, mes compétences et contactez-moi pour discuter de futures collaborations.
                 </p>
             </header>
-
+            <!-- Content section -->
+            <section class="flex flex-col md:flex-row items-center gap-12 mt-16">
+                <div class="w-full md:w-96 group">
+                    <div class="relative overflow-hidden rounded-2xl">
+                        <div
+                            class="absolute inset-0 bg-[#e5ff00] blur-md opacity-0 group-hover:opacity-20 transition duration-500">
+                        </div>
+                        <img src="https://intranet.youcode.ma/storage/users/profile/1404-1728554691.JPG"
+                            alt="Hero image"
+                            class="w-full h-full object-cover shadow-xl transition-all duration-500 group-hover:scale-105">
+                    </div>
+                </div>
+                <div class="flex-1 text-center px-24 space-y-6 bg-black/10 rounded-lg">
+                    <h2 class="text-4xl font-bold gradient-text">Abderrahmane AHLALLAY</h2>
+                    <p class="text-lg text-white leading-relaxed">
+                        Je suis un développeur passionné par le web et le mobile, spécialisé dans la création
+                        d'applications interactives et innovantes. Mon engagement envers l'open-source et mon désir
+                        constant d'apprentissage me poussent à explorer de nouvelles technologies et à contribuer
+                        activement à la communauté du développement.
+                    </p>
+                </div>
+            </section>
             
+
         </div>
     </main>
 
 </body>
+
 </html>
