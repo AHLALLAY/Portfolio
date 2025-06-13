@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projets - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../style/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#e5ff00',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="flex min-h-screen bg-gray-900 text-white">
+    <!-- Sidebar (identique aux autres pages) -->
+    <aside class="fixed h-full glass-effect w-20 p-6 rounded-r-3xl space-y-12 text-center transition-all duration-300 hover:w-24 z-50 animate-slide-in mobile-menu">
+        <!-- ... Même code que dans index.html ... -->
+    </aside>
+
+    <!-- Mobile Menu Button -->
+    <button id="mobileMenuBtn" class="md:hidden fixed top-4 left-4 z-50 bg-primary text-black p-2 rounded-lg">
+        ☰
+    </button>
+
+    <!-- Main Content -->
+    <main class="flex-1 ml-20 p-8 bg-cover bg-center bg-fixed relative animate-fade-in" style="background-image: url('../asset/img/hero.jpg');">
+        <div class="absolute inset-0 bg-gradient-to-br from-gray-900/90 via-gray-900/70 to-transparent"></div>
+
+        <div class="relative container mx-auto max-w-6xl">
+            <!-- Header Section -->
+            <header class="text-center mb-5 animate-fade-in">
+                <h1 class="text-5xl font-bold gradient-text mb-6">Mes Projets</h1>
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+                    Découvrez mes réalisations et cas d'étude
+                </p>
+            </header>
+
+            <!-- Projects Grid -->
+            <section class="mb-20">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Projet 1 -->
+                    <div class="group">
+                        <div class="relative p-6 rounded-xl bg-gray-800/50 backdrop-blur-sm border border-gray-700 hover:border-primary transition-all duration-300 h-full">
+                            <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
+                            <img src="../asset/img/projet1.jpg" alt="Capture d'écran du projet 1"
+                                class="w-full h-48 object-cover rounded-lg mb-4">
+                            <h3 class="text-2xl font-semibold text-primary mb-2">Application Web</h3>
+                            <p class="text-gray-300 mb-4">Description du projet et des technologies utilisées...</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-2 py-1 bg-gray-700 rounded-full text-xs text-primary">HTML</span>
+                                <span class="px-2 py-1 bg-gray-700 rounded-full text-xs text-primary">CSS</span>
+                                <span class="px-2 py-1 bg-gray-700 rounded-full text-xs text-primary">JavaScript</span>
+                            </div>
+                            <a href="#" class="text-primary hover:underline flex items-center">
+                                Voir plus
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Projet 2 -->
+                    <div class="group">
+                        <div class="relative p-6 rounded-xl bg-gray-800/50 backdrop-blur-sm border border-gray-700 hover:border-primary transition-all duration-300 h-full">
+                            <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
+                            <img src="../asset/img/projet2.jpg" alt="Capture d'écran du projet 2"
+                                class="w-full h-48 object-cover rounded-lg mb-4">
+                            <h3 class="text-2xl font-semibold text-primary mb-2">Application Mobile</h3>
+                            <p class="text-gray-300 mb-4">Description du projet et des défis rencontrés...</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-2 py-1 bg-gray-700 rounded-full text-xs text-primary">Java</span>
+                                <span class="px-2 py-1 bg-gray-700 rounded-full text-xs text-primary">Android</span>
+                            </div>
+                            <a href="#" class="text-primary hover:underline flex items-center">
+                                Voir plus
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- ... Ajouter d'autres projets selon besoin ... -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script>
+        // Mobile menu toggle (identique aux autres pages)
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.querySelector('aside').classList.toggle('mobile-open');
+        });
+
+        document.querySelectorAll('aside nav a').forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth < 768) {
+                    document.querySelector('aside').classList.remove('mobile-open');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
