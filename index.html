@@ -1,86 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AA - PortFolio</title>
+    <title>AA - Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="style/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#e5ff00',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 
 <body class="flex min-h-screen bg-gray-900 text-white">
     <!-- Sidebar -->
-    <aside
-        class="fixed h-full glass-effect w-20 p-6 rounded-r-3xl space-y-12 text-center transition-all duration-300 hover:w-24 z-50 animate-slide-in">
+    <aside class="fixed h-full glass-effect w-20 p-6 rounded-r-3xl space-y-12 text-center transition-all duration-300 hover:w-24 z-50 animate-slide-in mobile-menu">
         <!-- Logo -->
-        <a href="index.html">
+        <a href="index.html" aria-label="Accueil">
             <div class="flex justify-center items-center mb-8 transition-transform duration-300 hover:scale-110">
                 <div class="relative group flex">
-                    <span
-                        class="absolute inset-0 bg-[#e5ff00] rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-300"></span>
-                    <span
-                        class="relative text-[#e5ff00] text-4xl font-bold border-2 rounded-lg border-[#e5ff00] p-1 mr-[5px]">A</span>
-                    <span
-                        class="relative text-4xl font-bold text-black bg-[#e5ff00]/80 rounded-lg p-1 ml-[-20px]">A</span>
+                    <span class="absolute inset-0 bg-primary rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-300"></span>
+                    <span class="relative text-primary text-4xl font-bold border-2 rounded-lg border-primary p-1 mr-[5px]">A</span>
+                    <span class="relative text-4xl font-bold text-black bg-primary/80 rounded-lg p-1 ml-[-20px]">A</span>
                 </div>
             </div>
         </a>
 
         <!-- Navigation Links -->
-        <nav class="space-y-4">
+        <nav class="space-y-4" aria-label="Navigation principale">
             <div class="group">
-                <a href="index.html" class="block relative">
-                    <div
-                        class="absolute inset-0 bg-[#e5ff00] rounded-full blur opacity-0 group-hover:opacity-80 transition duration-300">
-                    </div>
-                    <img src="/asset/ico/Home-icon.jpg" alt="Home icon"
+                <a href="index.html" class="block relative" aria-label="Accueil">
+                    <div class="absolute inset-0 bg-primary rounded-full blur opacity-0 group-hover:opacity-80 transition duration-300"></div>
+                    <img src="asset/ico/Home-icon.jpg" alt="Icône Accueil"
                         class="w-10 h-10 mx-auto rounded-xl transition-all duration-300 group-hover:scale-110">
-                    <span
-                        class="absolute left-full ml-4 px-2 py-1 bg-[#e5ff00] text-black text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">Accueil</span>
+                    <span class="absolute left-full ml-4 px-2 py-1 bg-primary text-black text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">Accueil</span>
                 </a>
             </div>
             <div class="group">
-                <a href="views/competence.html" class="block relative">
-                    <div
-                        class="absolute inset-0 bg-[#e5ff00] rounded-full blur opacity-0 group-hover:opacity-80 transition duration-300">
-                    </div>
-                    <img src="/asset/ico/competence.jpg" alt="Skills icon"
+                <a href="views/competence.html" class="block relative" aria-label="Compétences">
+                    <div class="absolute inset-0 bg-primary rounded-full blur opacity-0 group-hover:opacity-80 transition duration-300"></div>
+                    <img src="asset/ico/competence.jpg" alt="Icône Compétences"
                         class="w-10 h-10 mx-auto rounded-xl transition-all duration-300 group-hover:scale-110">
-                    <span
-                        class="absolute left-full ml-4 px-2 py-1 bg-[#e5ff00] text-black text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">Mes
-                        Compétences</span>
+                    <span class="absolute left-full ml-4 px-2 py-1 bg-primary text-black text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">Compétences</span>
                 </a>
             </div>
             <div class="group">
-                <a href="#projects" class="block relative">
-                    <div
-                        class="absolute inset-0 bg-[#e5ff00] rounded-full blur opacity-0 group-hover:opacity-80 transition duration-300">
-                    </div>
-                    <img src="/asset/ico/projet.jpg" alt="Projects icon"
+                <a href="views/projets.html" class="block relative" aria-label="Projets">
+                    <div class="absolute inset-0 bg-primary rounded-full blur opacity-0 group-hover:opacity-80 transition duration-300"></div>
+                    <img src="asset/ico/projet.jpg" alt="Icône Projets"
                         class="w-10 h-10 mx-auto rounded-xl transition-all duration-300 group-hover:scale-110">
-                    <span
-                        class="absolute left-full ml-4 px-2 py-1 bg-[#e5ff00] text-black text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">Mes
-                        Projets</span>
+                    <span class="absolute left-full ml-4 px-2 py-1 bg-primary text-black text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">Projets</span>
                 </a>
             </div>
             <div class="group">
-                <a href="#contact" class="block relative">
-                    <div
-                        class="absolute inset-0 bg-[#e5ff00] rounded-full blur opacity-0 group-hover:opacity-80 transition duration-300">
-                    </div>
-                    <img src="/asset/ico/Email-3-icon.jpg" alt="Contact icon"
+                <a href="#contact" class="block relative" aria-label="Contact">
+                    <div class="absolute inset-0 bg-primary rounded-full blur opacity-0 group-hover:opacity-80 transition duration-300"></div>
+                    <img src="asset/ico/Email-3-icon.jpg" alt="Icône Contact"
                         class="w-10 h-10 mx-auto rounded-xl transition-all duration-300 group-hover:scale-110">
-                    <span
-                        class="absolute left-full ml-4 px-2 py-1 bg-[#e5ff00] text-black text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">Contact
-                        Moi</span>
+                    <span class="absolute left-full ml-4 px-2 py-1 bg-primary text-black text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">Contact</span>
                 </a>
             </div>
         </nav>
     </aside>
+
+    <!-- Mobile Menu Button -->
+    <button id="mobileMenuBtn" class="md:hidden fixed top-4 left-4 z-50 bg-primary text-black p-2 rounded-lg">
+        ☰
+    </button>
+
     <!-- Main Content -->
-    <main class="flex-1 ml-20 p-8 bg-cover bg-center bg-fixed relative animate-fade-in"
-        style="background-image: url('/asset/img/hero.jpg');">
+    <main class="flex-1 ml-20 p-8 bg-cover bg-center bg-fixed relative animate-fade-in" style="background-image: url('asset/img/hero.jpg');">
         <!-- Overlay -->
         <div class="absolute inset-0 bg-gradient-to-br from-gray-900/80 to-transparent"></div>
 
@@ -90,19 +87,17 @@
                 <h1 class="text-5xl font-extrabold mb-4 gradient-text">
                     Bienvenue sur mon Portfolio
                 </h1>
-                <p class="text-xl text-[#e5ff00]/90 font-light">
+                <p class="text-xl text-primary/90 font-light">
                     Découvrez mes projets, mes compétences et contactez-moi pour discuter de futures collaborations.
                 </p>
             </header>
-            <!-- Content section -->
+            
+            <!-- About Section -->
             <section class="flex flex-col md:flex-row items-center gap-12 mt-16">
                 <div class="w-full md:w-96 group">
                     <div class="relative overflow-hidden rounded-2xl">
-                        <div
-                            class="absolute inset-0 bg-[#e5ff00] blur-md opacity-0 group-hover:opacity-20 transition duration-500">
-                        </div>
-                        <img src="https://intranet.youcode.ma/storage/users/profile/1404-1728554691.JPG"
-                            alt="Hero image"
+                        <div class="absolute inset-0 bg-primary blur-md opacity-0 group-hover:opacity-20 transition duration-500"></div>
+                        <img src="https://intranet.youcode.ma/storage/users/profile/1404-1728554691.JPG" alt="Photo de profil"
                             class="w-full h-full object-cover shadow-xl transition-all duration-500 group-hover:scale-105">
                     </div>
                 </div>
@@ -116,7 +111,8 @@
                     </p>
                 </div>
             </section>
-            <!-- Formulaire de contact -->
+
+            <!-- Contact Form -->
             <section id="contact" class="relative mt-20">
                 <div class="max-w-4xl mx-auto">
                     <h2 class="text-4xl font-bold gradient-text text-center mb-12 mt-46">Contactez-moi</h2>
@@ -125,32 +121,32 @@
                         <form action="php/send_email.php" method="POST" class="space-y-6">
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div class="space-y-2">
-                                    <label for="name" class="text-[#e5ff00] block">Nom</label>
+                                    <label for="name" class="text-primary block">Nom</label>
                                     <input type="text" id="name" name="name" required
-                                        class="w-full px-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg focus:border-[#e5ff00] focus:ring-2 focus:ring-[#e5ff00] focus:ring-opacity-50 transition-all duration-300">
+                                        class="w-full px-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg focus:border-primary focus:ring-2 focus:ring-primary focus:ring-opacity-50 transition-all duration-300">
                                 </div>
                                 <div class="space-y-2">
-                                    <label for="email" class="text-[#e5ff00] block">Email</label>
+                                    <label for="email" class="text-primary block">Email</label>
                                     <input type="email" id="email" name="email" required
-                                        class="w-full px-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg focus:border-[#e5ff00] focus:ring-2 focus:ring-[#e5ff00] focus:ring-opacity-50 transition-all duration-300">
+                                        class="w-full px-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg focus:border-primary focus:ring-2 focus:ring-primary focus:ring-opacity-50 transition-all duration-300">
                                 </div>
                             </div>
 
                             <div class="space-y-2">
-                                <label for="subject" class="text-[#e5ff00] block">Sujet</label>
+                                <label for="subject" class="text-primary block">Sujet</label>
                                 <input type="text" id="subject" name="subject" required
-                                    class="w-full px-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg focus:border-[#e5ff00] focus:ring-2 focus:ring-[#e5ff00] focus:ring-opacity-50 transition-all duration-300">
+                                    class="w-full px-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg focus:border-primary focus:ring-2 focus:ring-primary focus:ring-opacity-50 transition-all duration-300">
                             </div>
 
                             <div class="space-y-2">
-                                <label for="message" class="text-[#e5ff00] block">Message</label>
+                                <label for="message" class="text-primary block">Message</label>
                                 <textarea id="message" name="message" rows="6" required
-                                    class="w-full px-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg focus:border-[#e5ff00] focus:ring-2 focus:ring-[#e5ff00] focus:ring-opacity-50 transition-all duration-300 resize-none"></textarea>
+                                    class="w-full px-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg focus:border-primary focus:ring-2 focus:ring-primary focus:ring-opacity-50 transition-all duration-300 resize-none"></textarea>
                             </div>
 
                             <div class="text-center">
                                 <button type="submit"
-                                    class="px-8 py-3 bg-[#e5ff00] text-gray-900 font-bold rounded-lg hover:bg-[#e5ff00]/80 transform hover:scale-105 transition-all duration-300">
+                                    class="px-8 py-3 bg-primary text-gray-900 font-bold rounded-lg hover:bg-primary/80 transform hover:scale-105 transition-all duration-300">
                                     Envoyer le message
                                 </button>
                             </div>
@@ -158,14 +154,23 @@
                     </div>
                 </div>
             </section>
-            <!-- Alert pour les messages de succès/erreur -->
-            <div id="alert"
-                class="fixed top-4 right-4 max-w-sm p-4 rounded-lg shadow-lg transform transition-all duration-500 opacity-0 translate-y-[-100%]">
-                <div id="alert-content" class="flex items-center space-x-4"></div>
-            </div>
         </div>
     </main>
 
-</body>
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.querySelector('aside').classList.toggle('mobile-open');
+        });
 
+        // Close menu when clicking on a link (mobile)
+        document.querySelectorAll('aside nav a').forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth < 768) {
+                    document.querySelector('aside').classList.remove('mobile-open');
+                }
+            });
+        });
+    </script>
+</body>
 </html>
